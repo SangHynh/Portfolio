@@ -1,19 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "RaleWay",sans-serif;
+  font-family: "RaleWay", sans-serif;
 }
 
-body{
-  background-color: var(--main-color);
+body {
+  background-color: var(--main-theme-color);
 }
 
-:root{
-  --header-color: rgba(37,37,37,1);
-  --header-text-color: #f9f9f9;
-  --main-color: rgba(45,45,45,1);
-  --header-sub-text-color: #5786da;
+:root {
+  --header-color: rgba(37, 37, 37, 1);
+  --text-color: #f9f9f9;
+  --main-theme-color: rgba(45, 45, 45, 1);
+  --sub-text-color: #5786da;
+  --black-color: #000;
+  --primary-button-color: #7fa5bcb9;
+}
+
+.button {
+  text-decoration: none;
+  color: var(--black-color);
+  padding: 5px 20px;
+  font-weight: bold;
+  font-size: 1.6rem;
+  border: 1px solid white;
+  border-radius: 3px;
+  margin: 1rem 0.2rem;
+}
+
+.primary-button {
+  background-color: var(--primary-button-color);
+}
+
+.secondary-button{
+  color: var(--text-color);
+}
+
+.button:hover{
+  opacity: 0.6;
 }

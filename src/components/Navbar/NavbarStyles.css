@@ -26,12 +26,12 @@
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: 500;
-    color: var(--header-text-color);
+    color: var(--text-color);
     opacity: 0.9;
 }
 
 .navbar__container h1 span{
-    color: var(--header-sub-text-color)
+    color: var(--sub-text-color)
 }
 
 .navbar__hamburger{
