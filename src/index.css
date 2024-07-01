@@ -13,8 +13,9 @@ body {
 
 :root {
   --header-color: rgba(25, 25, 25, 1);
+  --footer-color: rgba(5, 5, 5, 1);
   --text-color: #f9f9f9;
-  --main-theme-color: rgba(45, 45, 45, 1);
+  --main-theme-color: rgba(45, 45, 45, 0.8);
   --sub-text-color: #5786da;
   --black-color: #000;
   --primary-button-color: #7d9aabb9;

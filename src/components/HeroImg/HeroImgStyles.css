@@ -25,9 +25,9 @@
 }
 
 .hero__container h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   padding: 0.5rem 0 1.5rem;
-  color: var(--header-text-color);
+  color: var(--text-color);
   white-space: wrap;
 }
 
@@ -53,7 +53,7 @@
     background-image: var(--home-mobile-theme-image);
   }
   .hero__container h1 {
-    font-size: 2rem;
+    font-size: 3rem;
   }
   .hero__container p {
     font-size: 1.2rem;
