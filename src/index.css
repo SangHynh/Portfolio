@@ -12,12 +12,14 @@ body {
 }
 
 :root {
-  --header-color: rgba(37, 37, 37, 1);
+  --header-color: rgba(25, 25, 25, 1);
   --text-color: #f9f9f9;
   --main-theme-color: rgba(45, 45, 45, 1);
   --sub-text-color: #5786da;
   --black-color: #000;
-  --primary-button-color: #7fa5bcb9;
+  --primary-button-color: #7d9aabb9;
+  --home-web-theme-image: url('./assets/img/bocchi-web.jpg');
+  --home-mobile-theme-image: url('./assets/img/bocchi.jpg');
 }
 
 .button {
@@ -27,7 +29,7 @@ body {
   font-weight: bold;
   font-size: 1.6rem;
   border: 1px solid white;
-  border-radius: 3px;
+  border-radius: 2px;
   margin: 1rem 0.2rem;
 }
 

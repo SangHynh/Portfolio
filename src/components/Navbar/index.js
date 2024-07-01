@@ -6,16 +6,25 @@ import { FaTimes as CloseMenu } from "react-icons/fa";
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
+  const [color, setColor] = useState(false);
   const handleClick = () => setClick(!click);
 
+  const changeColor = () => {
+    window.scrollY >= 100 ? setColor(true) : setColor(false);
+  };
+
+  window.addEventListener("scroll", changeColor);
+
   return (
-    <div className="navbar__container">
+    <div className={color ? "navbar__container navbar__container--color" : "navbar__container" }>
       <Link to="/">
         <h1>
           Portfol<span>io</span>
         </h1>
       </Link>
-      <ul className={click ? "navbar__list active":"navbar__list"}>
+      <ul
+        className={click ? "navbar__list navbar__list--active" : "navbar__list"}
+      >
         <li className="navbar__item">
           <Link to="/">Home</Link>
         </li>
