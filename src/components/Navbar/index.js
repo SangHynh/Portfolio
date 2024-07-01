@@ -7,7 +7,11 @@ import { FaTimes as CloseMenu } from "react-icons/fa";
 const Navbar = () => {
   const [click, setClick] = useState(false);
   const [color, setColor] = useState(false);
-  const handleClick = () => setClick(!click);
+  
+  const handleClick = () => {
+    setClick(!click);
+    document.querySelector('.navbar__hamburger').classList.toggle('menu-close');
+  };
 
   const changeColor = () => {
     window.scrollY >= 100 ? setColor(true) : setColor(false);
@@ -32,7 +36,7 @@ const Navbar = () => {
           <Link to="/about">About</Link>
         </li>
         <li className="navbar__item">
-          <Link to="/project">Project</Link>
+          <Link to="/project">Projects</Link>
         </li>
         <li className="navbar__item">
           <Link to="/contact">Contact</Link>

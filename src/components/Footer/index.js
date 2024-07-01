@@ -52,19 +52,19 @@ const Footer = () => {
             practical experience, enhance skills, and explore opportunities.
           </p>
           <div className="social">
-            <a target="_blank" href={urlFacebook}>
+            <a target="_blank" href={urlFacebook} rel="noopener noreferrer">
               <FacebookIcon
                 size={30}
                 style={{ color: "#fff", marginRight: "1rem" }}
               />
             </a>
-            <a target="_blank" href={urlGithub}>
+            <a target="_blank" href={urlGithub} rel="noopener noreferrer">
               <GithubIcon
                 size={30}
                 style={{ color: "#fff", marginRight: "1rem" }}
               />
             </a>
-            <a target="_blank" href={urlLinkedin}>
+            <a target="_blank" href={urlLinkedin} rel="noopener noreferrer">
               <LinkedinIcon
                 size={30}
                 style={{ color: "#fff", marginRight: "1rem" }}
