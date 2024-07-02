@@ -40,6 +40,8 @@
 
 .navbar__container h1 span {
   color: var(--sub-text-color);
+  font-family: 'Consolas', monospace;
+  font-weight: 700;
 }
 
 .navbar__hamburger {

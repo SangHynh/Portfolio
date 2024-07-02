@@ -1,0 +1,216 @@
+.about__container {
+  width: 100%;
+  height: 220vh;
+  position: relative;
+}
+
+/* TEXT COLOR */
+
+.about__cv .green-text {
+  color: var(--cv-text-green);
+}
+
+.about__cv .pink-text {
+  color: var(--cv-text-pink);
+}
+
+.about__cv .cyan-text {
+  color: var(--cv-text-cyan);
+}
+
+.about__cv .comment-text {
+  color: var(--cv-text-comment);
+}
+
+.about__cv .blue-text {
+  color: var(--cv-text-blue);
+}
+
+.about__cv .yellow-text {
+  color: var(--cv-text-yellow);
+}
+
+.about__cv .orange-text {
+  color: var(--cv-text-orange);
+}
+
+/* CV */
+.about__cv {
+  position: relative;
+  width: 60%;
+  height: auto;
+  background-color: var(--cv-theme);
+  padding: 3rem 2rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  flex-wrap: wrap;
+  word-wrap: break-word;
+  max-height: 180vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.about__cv h1,
+.about__cv span,
+.about__cv p,
+.about__cv h2,
+.about__cv h3,
+.about__cv h4,
+.about__cv li {
+  color: var(--cv-text);
+  font-family: "Consolas", monospace;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  word-wrap: break-word;
+}
+
+.about__cv span,
+.about__cv p {
+  font-size: 1.2rem;
+}
+
+.about__cv h4 {
+  font-size: 1.4rem;
+}
+
+.about__cv h3 {
+  font-size: 1.8rem;
+}
+
+.about__cv h2 {
+  font-size: 2rem;
+}
+
+.about__cv h1 {
+  font-size: 2.5rem;
+}
+
+/* CV HEADER */
+
+.cv__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.cv__header .right {
+  display: flex;
+  flex-direction: column;
+}
+
+.cv__header .right p {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.cv__header .right p span {
+  margin-left: 10px;
+}
+
+.cv__header .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+/* CV CAREER OBJECTIVE  */
+
+.cv__objective {
+  margin-bottom: 2rem;
+}
+
+/* CV GRID LAYOUT  */
+.cv__grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+}
+
+/* CV SKILL */
+.cv__skill p {
+  word-wrap: break-word;
+}
+
+.cv__skill ul {
+  list-style-type: none;
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.cv__skill li {
+  margin-left: 1.2rem;
+}
+
+/* CV EDUCATION */
+.cv__education {
+  margin-bottom: 2rem;
+}
+
+/* CV PROJECTS */
+.cv__project ul {
+  list-style-type: none;
+  line-height: 1.5rem;
+}
+
+.cv__project li {
+  margin-bottom: 1rem;
+}
+
+.cv__project .link::before {
+  content: attr(href);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  .about__cv span,
+  .about__cv p {
+    font-size: 1rem;
+  }
+
+  .about__cv h4 {
+    font-size: 1.2rem;
+  }
+
+  .about__cv h3 {
+    font-size: 1.6rem;
+  }
+
+  .about__cv h2 {
+    font-size: 1.8rem;
+  }
+
+  .about__cv h1 {
+    font-size: 2.3rem;
+  }
+
+  .about__cv {
+    width: 100%;
+    padding: 1.5rem 1.5rem;
+    overflow-x: hidden;
+  }
+
+  .cv__header {
+    flex-direction: column;
+  }
+
+  .cv__header .right p {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .cv__header .right p span {
+    margin-left: 10px;
+  }
+
+  .cv__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
