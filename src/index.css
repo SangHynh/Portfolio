@@ -56,6 +56,8 @@ body {
   --cv-text-orange: rgb(197, 132, 33);
   --scrollbar-color: #3f5479;
   --form-color: rgba(255, 255, 255, 0.1);
+  --toast-success: #91d6bd;
+  --toast-error: #ff8a80;
 }
 
 .button {
