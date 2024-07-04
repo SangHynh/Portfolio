@@ -244,15 +244,17 @@
   font-size: 2.5rem;
 }
 
+
+
 @media screen and (max-width: 1024px) {
   .about__cv span,
   .about__cv p,
   .about__cv li {
-    font-size: .8em;
+    font-size: 1.2rem;
   }
 
   .about__cv h4 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 
   .about__cv h3 {
@@ -260,11 +262,11 @@
   }
 
   .about__cv h2 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 
   .about__cv h1 {
-    font-size: 2.1rem;
+    font-size: 2.3rem;
   }
 
   .about__cv {
@@ -276,7 +278,7 @@
   .about__hero{
     padding: 1rem;
     flex-direction: column;
-    scale: 0.7;
+    scale: 0.95;
   }
 
   .cv__header {
@@ -306,7 +308,7 @@
   }
 
   .about__quote .quote {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   .about__quote .symbol {
@@ -317,6 +319,25 @@
   .about__quote .sub-content {
     margin-top: 0.6rem;
     font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about__hero{
+    padding: 0.2rem;
+    flex-direction: column;
+    scale: 0.75;
+  }
+
+  .about__quote  {
+    font-size: 1.5rem;
+    visibility: none;
+  }
+
+  .about__quote .symbol {
+    font-size: 2rem;
+    margin-left: -1rem;
+    margin-top: 1rem;
   }
 }
 

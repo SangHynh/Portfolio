@@ -57,10 +57,10 @@
   .hero__mask {
     background-image: var(--home-mobile-theme-image);
   }
-  .hero__container h1 {
+  .hero__container .title {
     font-size: 3rem;
   }
-  .hero__container p {
+  .hero__container .sub-title {
     font-size: 1.2rem;
   }
   .button {

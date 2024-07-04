@@ -16,12 +16,12 @@ body {
 *::-webkit-scrollbar {
   width: 10px;
 }
- 
+
 *::-webkit-scrollbar-track {
   background: var(--main-theme-color);
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
 }
- 
+
 *::-webkit-scrollbar-thumb {
   background: var(--scrollbar-color);
   border: 1px solid var(--scrollbar-color);
@@ -35,23 +35,27 @@ body {
   --header-color: rgba(25, 25, 25, 0.9);
   --footer-color: rgba(5, 5, 5, 1);
   --text-color: #f9f9f9;
-  --main-theme-color: linear-gradient(to right, #15161A, #14171a);
+  --main-theme-color: linear-gradient(to right, #15161a, #14171a);
   --sub-text-color: #5786da;
   --black-color: #000;
+  --light-black-color: #333;
   --primary-button-color: #509fcdb5;
-  --home-web-theme-image: url('./assets/img/bocchi-web.jpg');
-  --home-mobile-theme-image: url('./assets/img/bocchi.jpg');
-  --about-web-hero-image: url('./assets/img/bocchi.png');
+  --form-button-color: #ff69b4b1;
+  --home-web-theme-image: url("./assets/img/bocchi-web.jpg");
+  --home-mobile-theme-image: url("./assets/img/bocchi.jpg");
+  --about-web-hero-image: url("./assets/img/bocchi.png");
+  --contact-web-hero-image: url("./assets/img/contact.jpg");
   --cv-theme: #272822;
-  --cv-text: #F8F8F2;
-  --cv-text-green: #A6E22E;
+  --cv-text: #f8f8f2;
+  --cv-text-green: #a6e22e;
   --cv-text-comment: #666666;
-  --cv-text-pink: #F92672;
-  --cv-text-cyan: #66D9EF;
-  --cv-text-blue: #61AFEF;
+  --cv-text-pink: #f92672;
+  --cv-text-cyan: #66d9ef;
+  --cv-text-blue: #61afef;
   --cv-text-yellow: rgb(206, 173, 25);
   --cv-text-orange: rgb(197, 132, 33);
   --scrollbar-color: #3f5479;
+  --form-color: rgba(255, 255, 255, 0.1);
 }
 
 .button {
@@ -66,7 +70,7 @@ body {
 }
 
 @media screen and (max-width: 760px) {
-  .button{
+  .button {
     font-size: 1.9rem;
     padding: 1rem 2rem;
   }
@@ -76,12 +80,37 @@ body {
   background-color: var(--primary-button-color);
 }
 
-.secondary-button{
+.primary-button:hover {
+  opacity: .4;
+  transition: all ease 0.5s;
+  cursor: pointer;
+}
+
+.form-button {
+  background-color: var(--form-button-color);
   color: var(--text-color);
 }
 
-.button:hover{
-  opacity: 0.6;
+.form-button:hover{
+  background-color: transparent;
+  color: var(--text-color);
+  transition: all ease 0.5s;
+  cursor: pointer;
+}
+
+.secondary-button {
+  color: var(--text-color);
+}
+
+.secondary-button:hover {
+  background-color: var(--form-color);
+  opacity: 0.5;
+  color: var(--text-color);
+  transition: all ease 0.7s;
+}
+
+.button:hover {
+  opacity: 0.8;
 }
 
 /* TEXT COLOR */
@@ -90,52 +119,51 @@ body {
   color: var(--cv-text-green);
 }
 
- .pink-text {
+.pink-text {
   color: var(--cv-text-pink);
 }
 
- .cyan-text {
+.cyan-text {
   color: var(--cv-text-cyan);
 }
 
- .comment-text {
+.comment-text {
   color: var(--cv-text-comment);
 }
 
- .blue-text {
+.blue-text {
   color: var(--cv-text-blue);
 }
 
- .yellow-text {
+.yellow-text {
   color: var(--cv-text-yellow);
 }
 
-.normal-text{
-  color:var(--text-color)
+.normal-text {
+  color: var(--text-color);
 }
 
- .orange-text {
+.orange-text {
   color: var(--cv-text-orange);
 }
 
 /* FONT SIZE */
- .text-beginner {
-  font-size: 1.2rem; 
+.text-beginner {
+  font-size: 1.2rem;
 }
 
- .text-intermediate {
-  font-size: 1.6rem; 
+.text-intermediate {
+  font-size: 1.6rem;
 }
 
- .text-advanced {
-  font-size: 1.8rem; 
+.text-advanced {
+  font-size: 1.8rem;
 }
 
- .text-expert {
-  font-size: 2rem; 
+.text-expert {
+  font-size: 2rem;
 }
 
- .text-master {
-  font-size: 2.8rem; 
+.text-master {
+  font-size: 2.8rem;
 }
-
