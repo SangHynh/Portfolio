@@ -26,7 +26,7 @@
 
 .about__hero>div{
   animation: hero__fadeInLeft 5s ease;
-  text-align: center;
+  text-align: left;
 }
 .about__hero>div>ul {
   padding: 1rem;
@@ -281,6 +281,10 @@
     scale: 0.95;
   }
 
+  .about__hero>div{
+    text-align: center;
+  }
+
   .cv__header {
     flex-direction: column;
   }
@@ -326,10 +330,14 @@
   .about__hero{
     padding: 0.2rem;
     flex-direction: column;
-    scale: 0.75;
+    scale: 0.8;
   }
 
-  .about__quote  {
+  .about__hero>div{
+    text-align: center;
+  }
+
+  .about__quote .quote {
     font-size: 1.5rem;
     visibility: none;
   }
