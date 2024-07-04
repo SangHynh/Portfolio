@@ -22,20 +22,19 @@
   opacity: 0.8;
 }
 
-.form__container form {
+.form__container>form {
   position: relative;
   display: flex;
   flex-direction: column;
   padding: 4rem 1rem;
   margin: auto;
   max-width: 500px;
-  top: -50%;
-  z-index: 10;
+  z-index: 3;
   animation: form__fadeInLeft 2s ease-out;
 }
 
 .form__container label {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
 
