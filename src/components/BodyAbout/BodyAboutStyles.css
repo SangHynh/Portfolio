@@ -16,7 +16,7 @@
   align-items: center;
 }
 
-.about__hero img{
+.about__hero img {
   max-width: 100%;
   height: 100%;
   object-fit: cover;
@@ -24,7 +24,12 @@
   opacity: 0.6;
 }
 
-.about__hero>div>ul {
+.about__hero > div {
+  animation: hero__fadeInLeft 2s ease;
+  text-align: center;
+}
+
+.about__hero > div > ul {
   padding: 1rem;
   font-size: 1.3rem;
   color: var(--text-color);
@@ -46,7 +51,7 @@
   visibility: hidden;
 }
 
-.about__quote--active{
+.about__quote--active {
   animation: quotes__fadeInUp 2s ease;
   visibility: visible;
 }
@@ -90,7 +95,7 @@
   visibility: hidden;
 }
 
-.about__cv--active{
+.about__cv--active {
   visibility: visible;
   animation: cv__fadeIn 2s ease-in-out;
 }
@@ -150,7 +155,6 @@
 .cv__grid {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 2rem;
 }
 
 /* CV SKILL */
@@ -162,6 +166,7 @@
   list-style-type: none;
   line-height: 1.5rem;
   margin-bottom: 1rem;
+  word-wrap: break-word;
 }
 
 .cv__skill li {
@@ -251,24 +256,24 @@
   }
 
   .about__cv h3 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 
   .about__cv h2 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
   .about__cv h1 {
-    font-size: 2.3rem;
+    font-size: 2.1rem;
   }
 
   .about__cv {
-    width: 100%;
+    width: 90%;
     padding: 1.5rem 1.5rem;
-    overflow-x: hidden;
+    overflow-x: scroll;
   }
 
-  .about__hero{
+  .about__hero {
     padding: 1rem;
     flex-direction: column;
   }
@@ -290,22 +295,27 @@
   }
 
   .cv__grid {
-    display: grid;
+    display: block;
     grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .about__quote {
+    top: 180vh;
   }
 
   .about__quote .quote {
-    font-size: 3.1rem;
+    font-size: 2rem;
   }
 
   .about__quote .symbol {
-    font-size: 5.6rem;
+    font-size: 3.6rem;
     margin-left: -1rem;
   }
 
   .about__quote .sub-content {
     margin-top: 0.6rem;
-    font-size: 1.4rem;
+    font-size: 1rem;
   }
 }
 
@@ -356,4 +366,3 @@
     top: 300vh;
   }
 }
-

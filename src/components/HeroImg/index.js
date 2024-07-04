@@ -8,7 +8,7 @@ const HeroImg = () => {
     <div className="hero__container">
       <div className="hero__mask"></div>
       <div className="hero__content">
-        <Typewriter text={"HELLO, I'M HUYNH VAN SANG"} duration={2000} className="sub-title"></Typewriter>
+        <Typewriter text={"HELLO, I'M HUYNH VAN SANG"} duration={2000} delay={1000} className="sub-title"></Typewriter>
         <p className="title">Front-end Developer</p>
         <br />
         <Link to="/project" className="button primary-button">

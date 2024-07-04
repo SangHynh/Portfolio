@@ -20,7 +20,7 @@ const BodyAbout = () => {
   // Animation for cv
   const fadeInUpCV = () => {
     const viewportHeight = window.innerHeight;
-    const positionToTrigger = viewportHeight * 1.6;
+    const positionToTrigger = viewportHeight * 1.2;
     window.scrollY >= positionToTrigger
       ? setAnimationCv(true)
       : setAnimationCv(false);
@@ -41,7 +41,7 @@ const BodyAbout = () => {
       <div className="about__hero">
         <img src={HeroImg} alt="This is not me" />
         <div>
-          <Typewriter className="green-text text-expert" text={"About me"} duration={4000}></Typewriter>
+          <Typewriter className="green-text text-expert" text={"About me"} duration={2500}/>
           <ul>
             <li className="blue-text">
               Fourth-year Software Engineering student with over 6 months of
@@ -79,8 +79,8 @@ const BodyAbout = () => {
         {/* Header cv */}
         <div className="cv__header">
           <div className="left">
-            <h1 className="green-text text-master">Huynh Van Sang</h1>
-            <h2 className="text-expert normal-text">Front-end Intern</h2>
+            <h1 className="green-text">Huynh Van Sang</h1>
+            <h2 className="text-expert">Front-end Intern</h2>
           </div>
           <div className="right">
             <p className="pink-text">
@@ -99,7 +99,7 @@ const BodyAbout = () => {
         </div>
         {/* Objectives cv */}
         <div className="cv__objective">
-          <h3 className="comment-text text-advanced">{"//CAREER OBJECTIVES"}</h3>
+          <h3 className="comment-text">{"//CAREER OBJECTIVES"}</h3>
           <p>
             Apply learned knowledge to participate in and contribute to
             practical projects. Learn further from experienced professionals.
@@ -114,7 +114,7 @@ const BodyAbout = () => {
           <div className="cv__left">
             {/* Skill cv */}
             <div className="cv__skill">
-              <h3 className="comment-text text-advanced">{"//SKILLS"}</h3>
+              <h3 className="comment-text">{"//SKILLS"}</h3>
               {/* frontend */}
               <p>
                 <span className="pink-text">let </span>
