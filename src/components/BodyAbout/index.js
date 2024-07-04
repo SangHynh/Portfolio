@@ -41,7 +41,7 @@ const BodyAbout = () => {
       <div className="about__hero">
         <img src={HeroImg} alt="This is not me" />
         <div>
-          <Typewriter className="green-text text-expert" text={"About me"} duration={2500}/>
+          <Typewriter className="green-text text-expert" text={"About me"} duration={1500}/>
           <ul>
             <li className="blue-text">
               Fourth-year Software Engineering student with over 6 months of
