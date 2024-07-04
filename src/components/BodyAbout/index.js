@@ -1,18 +1,86 @@
+import Typewriter from "../../utils/Typewriter";
 import "./BodyAboutStyles.css";
-import React from "react";
-import PerfectScrollbar from "react-perfect-scrollbar";
-import "react-perfect-scrollbar/dist/css/styles.css";
+import React, { useState, useEffect } from "react";
+import HeroImg from "../../assets/img/bocchi.png";
+import '../../index.css'
 
 const BodyAbout = () => {
+  const [animationQuote, setAnimationQuote] = useState(false);
+  const [animationCv, setAnimationCv] = useState(false);
+
+  // Animation for quote
+  const fadeInUpQuote = () => {
+    const viewportHeight = window.innerHeight;
+    const positionToTrigger = viewportHeight * 0.6;
+    window.scrollY >= positionToTrigger
+      ? setAnimationQuote(true)
+      : setAnimationQuote(false);
+  };
+
+  // Animation for cv
+  const fadeInUpCV = () => {
+    const viewportHeight = window.innerHeight;
+    const positionToTrigger = viewportHeight * 1.6;
+    window.scrollY >= positionToTrigger
+      ? setAnimationCv(true)
+      : setAnimationCv(false);
+  };
+
+  window.addEventListener("scroll", fadeInUpQuote);
+  window.addEventListener("scroll", fadeInUpCV);
+
+  useEffect(() => {
+    return () => {
+      window.removeEventListener("scroll", fadeInUpQuote);
+      window.removeEventListener("scroll", fadeInUpCV);
+    };
+  }, []);
+
   return (
     <div className="about__container">
-      {/* <div className="about__mask"> */}
-      <PerfectScrollbar  className="about__cv">
+      <div className="about__hero">
+        <img src={HeroImg} alt="This is not me" />
+        <div>
+          <Typewriter className="green-text text-expert" text={"About me"} duration={4000}></Typewriter>
+          <ul>
+            <li className="blue-text">
+              Fourth-year Software Engineering student with over 6 months of
+              front-end software development experience
+            </li>
+            <li  className="pink-text">Proficient in HTML5, CSS3, JavaScript ES6</li>
+            <li  className="pink-text">
+              Understanding of Redux architecture, React Component, Functional
+              programming
+            </li>
+            <li  className="pink-text">
+              Experienced in designing responsive interfaces with basic
+              animations
+            </li>
+            <li className="pink-text">Familiar with REST API, JSON, Socket, JWT</li>
+            <li className="pink-text">
+              Basic knowledge of Node.js, SQL/NoSQL database, cloud services
+            </li>
+            <li >Proactive attitude and eagerness for continuous improvement</li>
+          </ul>
+        </div>
+      </div>
+      <div
+        className={
+          animationQuote ? "about__quote about__quote--active" : "about__quote"
+        }
+      >
+        <p className="symbol">“</p>
+        <p className="quote">Lemme save the world</p>
+        <p className="sub-content">-The best quote</p>
+      </div>
+      <div
+        className={animationCv ? "about__cv about__cv--active " : "about__cv"}
+      >
         {/* Header cv */}
         <div className="cv__header">
           <div className="left">
-            <h1 className="green-text">Huynh Van Sang</h1>
-            <h2>Front-end Intern</h2>
+            <h1 className="green-text text-master">Huynh Van Sang</h1>
+            <h2 className="text-expert normal-text">Front-end Intern</h2>
           </div>
           <div className="right">
             <p className="pink-text">
@@ -31,7 +99,7 @@ const BodyAbout = () => {
         </div>
         {/* Objectives cv */}
         <div className="cv__objective">
-          <h3 className="comment-text">{"//CAREER OBJECTIVES"}</h3>
+          <h3 className="comment-text text-advanced">{"//CAREER OBJECTIVES"}</h3>
           <p>
             Apply learned knowledge to participate in and contribute to
             practical projects. Learn further from experienced professionals.
@@ -46,7 +114,7 @@ const BodyAbout = () => {
           <div className="cv__left">
             {/* Skill cv */}
             <div className="cv__skill">
-              <h3 className="comment-text">{"//SKILLS"}</h3>
+              <h3 className="comment-text text-advanced">{"//SKILLS"}</h3>
               {/* frontend */}
               <p>
                 <span className="pink-text">let </span>
@@ -55,10 +123,12 @@ const BodyAbout = () => {
               </p>
               <ul>
                 <li className="cyan-text">HTML5, CSS3,</li>
-                <li className="cyan-text">JavaScript, ES6</li>
+                <li className="cyan-text">JavaScript, ES6,</li>
                 <li className="cyan-text">React</li>
-                <span className="yellow-text">{"]"}</span>
               </ul>
+              <p>
+                <span className="yellow-text">{"]"}</span>
+              </p>
               {/* backend */}
               <p>
                 <span className="pink-text">let </span>
@@ -68,8 +138,10 @@ const BodyAbout = () => {
               <ul>
                 <li className="cyan-text">NodeJS, ExpressJS,</li>
                 <li className="cyan-text">MongoDB</li>
-                <span className="yellow-text">{"]"}</span>
               </ul>
+              <p>
+                <span className="yellow-text">{"]"}</span>
+              </p>
               {/* tools */}
               <p>
                 <span className="pink-text">let </span>
@@ -79,48 +151,61 @@ const BodyAbout = () => {
               <ul>
                 <li className="cyan-text">Github, Postman, </li>
                 <li className="cyan-text">Figma, Canva </li>
-                <span className="yellow-text">{"]"}</span>
               </ul>
+              <p>
+                <span className="yellow-text">{"]"}</span>
+              </p>
               {/* english */}
               <p>
                 <span className="pink-text">let </span>
                 <span className="blue-text">english = </span>
-                <p className="orange-text">
-                  "Basic communication and reading documents."
-                </p>
+                <span className="orange-text">
+                  "Basic communication and documents reading."
+                </span>
               </p>
             </div>
           </div>
           <div className="cv__right">
             {/* Education cv */}
             <div className="cv__education">
-              <h3 className="comment-text">{"//EDUCATION"}</h3>
+              <h3 className="comment-text text-advanced">{"//EDUCATION"}</h3>
               <p>2020 - Present </p>
-              <h4 className="pink-text">Industrial University of HCMC - IUH</h4>
+              <h4 className="pink-text text-intermediate">Industrial University of HCMC - IUH</h4>
               <p className="cyan-text">Specialization: Software Engineering</p>
             </div>
             {/* projects */}
             <div className="cv__project">
-              <h3 className="comment-text">{"//PROJECTS"}</h3>
+              <h3 className="comment-text text-advanced">{"//PROJECTS"}</h3>
               <ul>
                 <li>
-                  <h4 className="pink-text">Asgy - Real-time chat web</h4>
+                  <h4 className="pink-text text-intermediate">Asgy - Real-time chat web</h4>
                   <p className="blue-text">
-                    Project timeline: <span>from Jan 2024 to May 2024</span>
+                    Project timeline: <span>Jan 2024 - May 2024</span>
                   </p>
                   <p className="blue-text">
                     {"Preview: "}
                     <a
                       href="https://youtu.be/8bUs-YII4BY"
                       className="link cyan-text"
-                    ></a>
+                    >
+                      YouTube Link
+                    </a>
                   </p>
                   <p className="blue-text">
                     {"Source: "}
                     <a
                       href="https://github.com/JiaG293/asgy.git"
                       className="link cyan-text"
-                    ></a>
+                    >
+                      GitHub Link
+                    </a>
+                  </p>
+                  <p>
+                    <span className="blue-text">Team size: </span>2
+                  </p>
+                  <p>
+                    <span className="blue-text">Position: </span>
+                    Front-end developer
                   </p>
                   <p>
                     <span className="blue-text">Description: </span>
@@ -136,23 +221,27 @@ const BodyAbout = () => {
                   </p>
                 </li>
                 <li>
-                  <h4 className="pink-text">Personal Portfolio</h4>
+                  <h4 className="pink-text text-intermediate">Personal Portfolio</h4>
                   <p className="blue-text">
-                    Project timeline: <span>from June 30, 2024 to present.</span>
+                    Project timeline: <span>June 30, 2024 - present.</span>
                   </p>
                   <p className="blue-text">
                     {"Preview: "}
                     <a
                       href="https://portfolio-one-sable-99.vercel.app/"
                       className="link cyan-text"
-                    ></a>
+                    >
+                      Vercel Link
+                    </a>
                   </p>
                   <p className="blue-text">
                     {"Source: "}
                     <a
                       href="https://github.com/SangHynh/Portfolio"
                       className="link cyan-text"
-                    ></a>
+                    >
+                      GitHub Link
+                    </a>
                   </p>
                   <p>
                     <span className="blue-text">Description: </span>
@@ -169,8 +258,7 @@ const BodyAbout = () => {
             </div>
           </div>
         </div>
-      </PerfectScrollbar>
-      {/* </div> */}
+      </div>
     </div>
   );
 };

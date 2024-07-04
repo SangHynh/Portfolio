@@ -1,0 +1,22 @@
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--text-color);
+  }
+}
+
+.typewriter {
+  display: inline-block;
+  white-space: wrap; 
+  overflow: hidden;
+  border-right: 1px solid transparent; 
+  animation: blink-caret 1s steps(1) infinite; 
+  text-align: left;
+}
+
+/* .typewriter--complete{
+  border: none;
+} */
