@@ -111,6 +111,12 @@
   font-weight: 500;
   letter-spacing: 0.1rem;
   word-wrap: break-word;
+  text-decoration: none;
+}
+
+.about__cv a{
+  font-family: "Consolas", monospace;
+
 }
 
 /* CV HEADER */

@@ -2,7 +2,7 @@ import Typewriter from "../../utils/Typewriter";
 import "./BodyAboutStyles.css";
 import React, { useState, useEffect } from "react";
 import HeroImg from "../../assets/img/bocchi.png";
-import '../../index.css'
+import "../../index.css";
 
 const BodyAbout = () => {
   const [animationQuote, setAnimationQuote] = useState(false);
@@ -41,26 +41,34 @@ const BodyAbout = () => {
       <div className="about__hero">
         <img src={HeroImg} alt="This is not me" />
         <div>
-          <Typewriter className="green-text text-expert" text={"About me"} duration={1500}/>
+          <Typewriter
+            className="green-text text-expert"
+            text={"About me"}
+            duration={1500}
+          />
           <ul>
             <li className="blue-text">
               Fourth-year Software Engineering student with over 6 months of
               front-end software development experience
             </li>
-            <li  className="pink-text">Proficient in HTML5, CSS3, JavaScript ES6</li>
-            <li  className="pink-text">
+            <li className="pink-text">
+              Proficient in HTML5, CSS3, JavaScript ES6
+            </li>
+            <li className="pink-text">
               Understanding of Redux architecture, React Component, Functional
               programming
             </li>
-            <li  className="pink-text">
+            <li className="pink-text">
               Experienced in designing responsive interfaces with basic
               animations
             </li>
-            <li className="pink-text">Familiar with REST API, JSON, Socket, JWT</li>
+            <li className="pink-text">
+              Familiar with REST API, JSON, Socket, JWT
+            </li>
             <li className="pink-text">
               Basic knowledge of Node.js, SQL/NoSQL database, cloud services
             </li>
-            <li >Proactive attitude and eagerness for continuous improvement</li>
+            <li>Proactive attitude and eagerness for continuous improvement</li>
           </ul>
         </div>
       </div>
@@ -93,7 +101,10 @@ const BodyAbout = () => {
               Address: <span>{process.env.REACT_APP_ADDRESS}</span>
             </p>
             <p className="pink-text">
-              Github: <span>{process.env.REACT_APP_GITHUB}</span>
+              Github:
+              <a href={process.env.REACT_APP_GITHUB} className="cyan-text">
+                {process.env.REACT_APP_GITHUB}
+              </a>
             </p>
           </div>
         </div>
@@ -170,7 +181,9 @@ const BodyAbout = () => {
             <div className="cv__education">
               <h3 className="comment-text text-advanced">{"//EDUCATION"}</h3>
               <p>2020 - Present </p>
-              <h4 className="pink-text text-intermediate">Industrial University of HCMC - IUH</h4>
+              <h4 className="pink-text text-intermediate">
+                Industrial University of HCMC - IUH
+              </h4>
               <p className="cyan-text">Specialization: Software Engineering</p>
             </div>
             {/* projects */}
@@ -178,7 +191,9 @@ const BodyAbout = () => {
               <h3 className="comment-text text-advanced">{"//PROJECTS"}</h3>
               <ul>
                 <li>
-                  <h4 className="pink-text text-intermediate">Asgy - Real-time chat web</h4>
+                  <h4 className="pink-text text-intermediate">
+                    Asgy - Real-time chat web
+                  </h4>
                   <p className="blue-text">
                     Project timeline: <span>Jan 2024 - May 2024</span>
                   </p>
@@ -221,7 +236,9 @@ const BodyAbout = () => {
                   </p>
                 </li>
                 <li>
-                  <h4 className="pink-text text-intermediate">Personal Portfolio</h4>
+                  <h4 className="pink-text text-intermediate">
+                    Personal Portfolio
+                  </h4>
                   <p className="blue-text">
                     Project timeline: <span>June 30, 2024 - present.</span>
                   </p>
