@@ -228,7 +228,7 @@ const BodyAbout = () => {
                   <p className="blue-text">
                     {"Preview: "}
                     <a
-                      href="https://portfolio-one-sable-99.vercel.app/"
+                      href="https://sanghynhdev.netlify.app/"
                       className="link cyan-text"
                     >
                       Vercel Link
