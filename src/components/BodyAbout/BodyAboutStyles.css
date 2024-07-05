@@ -276,9 +276,9 @@
   }
 
   .about__cv {
-    width: 90%;
+    width: 100%;
     padding: 1.5rem 1.5rem;
-    overflow-x: scroll;
+    overflow-x: auto;
   }
 
   .about__hero{
@@ -332,7 +332,7 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 950px) {
   .about__hero{
     padding: 0.2rem;
     flex-direction: column;
