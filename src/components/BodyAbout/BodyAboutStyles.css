@@ -1,405 +1,141 @@
 .about__container {
   width: 100%;
-  height: 400vh;
+  height: auto;
   position: relative;
   overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .about__hero {
-  top: 10%;
-  position: absolute;
   width: 100%;
-  height: 55vh;
+  height: 100vh;
   border: none;
   display: flex;
-  justify-content: space-between;
+  background: var(--about-web-hero-image);
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.about__hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.about__title {
+  color: var(--text-color);
+  z-index: 2;
+  font-size: 4rem;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.about__overview {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about__overview img {
+  position: relative;
+  z-index: 1;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); 
+  z-index: 2;
+  pointer-events: none; 
+}
+
+.about__overview-content {
+  position: relative;
+  z-index: 3;
+  width: 50%;
+  text-align: center;
+}
+
+.about__overview h2 {
+  color: var(--cv-text-blue);
+  font-weight: 400;
+  font-size: 2.5rem;
+  opacity: 0.9;
+}
+
+.about__education {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
   align-items: center;
 }
 
-.about__hero img{
-  max-width: 100%;
-  height: 100%;
-  object-fit: cover;
-  animation: hero__fadeInRight 2s ease-in-out;
-  opacity: 0.6;
+.about__education img {
+  width: 20%;
+  height: auto;
+  opacity: 0.7;
 }
 
-.about__hero>div{
-  animation: hero__fadeInLeft 5s ease;
-  text-align: left;
-}
-.about__hero>div>ul {
-  padding: 1rem;
-  font-size: 1.3rem;
-  color: var(--text-color);
-  font-family: Arial, sans-serif;
-  font-weight: 400;
-  text-align: left;
-  animation: hero__fadeInLeft 5s ease;
-}
-
-.about__quote {
-  position: absolute;
+.about__education-content {
   display: flex;
   flex-direction: column;
-  top: 150vh;
+  text-align: justify; 
+}
+
+.about__education h2 {
   color: var(--text-color);
-  left: 50%;
-  transform: translateX(-50%);
-  line-height: 2.3rem;
-  visibility: hidden;
-}
-
-.about__quote--active{
-  animation: quotes__fadeInUp 2s ease;
-  visibility: visible;
-}
-
-.about__quote .quote {
-  font-family: "Courier New", Courier, monospace;
+  font-weight: 500;
   font-size: 3.5rem;
 }
 
-.about__quote .symbol {
-  font-size: 6rem;
-  color: var(--cv-text-pink);
-  font-size: bolder;
-  margin-left: -2rem;
-}
-
-.about__quote .sub-content {
-  margin-top: 1rem;
-  font-family: "Consolas", monospace;
-  font-size: 1.8rem;
-  text-align: end;
-  font-weight: medium;
-  color: var(--sub-text-color);
-}
-
-/* CV */
-.about__cv {
-  position: absolute;
-  width: 60%;
-  height: auto;
-  background-color: var(--cv-theme);
-  padding: 2rem 1rem;
-  left: 50%;
-  top: 300vh;
-  transform: translate(-50%, -50%);
-  flex-wrap: wrap;
-  word-wrap: break-word;
-  max-height: 170vh;
-  overflow-y: auto;
-  overflow-x: hidden;
-  visibility: hidden;
-}
-
-.about__cv--active{
-  visibility: visible;
-  animation: cv__fadeIn 2s ease-in-out;
-}
-
-.about__cv h1,
-.about__cv span,
-.about__cv p,
-.about__cv h2,
-.about__cv h3,
-.about__cv h4,
-.about__cv li {
-  color: var(--cv-text);
-  font-family: "Consolas", monospace;
-  font-weight: 500;
-  letter-spacing: 0.1rem;
-  word-wrap: break-word;
-  text-decoration: none;
-}
-
-.about__cv a{
-  font-family: "Consolas", monospace;
-
-}
-
-/* CV HEADER */
-
-.cv__header {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 3rem;
-}
-
-.cv__header .right {
-  display: flex;
-  flex-direction: column;
-}
-
-.cv__header .right p {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 0.5rem;
-  flex-wrap: wrap;
-}
-
-.cv__header .right p span {
-  margin-left: 10px;
-}
-
-.cv__header .left {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-bottom: 1rem;
-}
-
-/* CV CAREER OBJECTIVE  */
-
-.cv__objective {
-  margin-bottom: 2rem;
-}
-
-/* CV GRID LAYOUT  */
-.cv__grid {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-}
-
-/* CV SKILL */
-.cv__skill p {
-  word-wrap: break-word;
-}
-
-.cv__skill ul {
-  list-style-type: none;
-  line-height: 1.5rem;
-  margin-bottom: 1rem;
-  word-wrap: break-word;
-}
-
-.cv__skill li {
-  margin-left: 1.2rem;
-}
-
-/* CV EDUCATION */
-.cv__education {
-  margin-bottom: 2rem;
-}
-
-/* CV PROJECTS */
-.cv__project ul {
-  list-style-type: none;
-  line-height: 1.5rem;
-}
-
-.cv__project li {
-  margin-bottom: 1rem;
-}
-
-.cv__project .link::before {
-  content: attr(href);
-  cursor: pointer;
-}
-
-/* TEXT COLOR */
-
-.about__cv .green-text {
-  color: var(--cv-text-green);
-}
-
-.about__cv .pink-text {
+.about__education strong {
   color: var(--cv-text-pink);
 }
 
-.about__cv .cyan-text {
-  color: var(--cv-text-cyan);
-}
-
-.about__cv .comment-text {
-  color: var(--cv-text-comment);
-}
-
-.about__cv .blue-text {
-  color: var(--cv-text-blue);
-}
-
-.about__cv .yellow-text {
-  color: var(--cv-text-yellow);
-}
-
-.about__cv .orange-text {
-  color: var(--cv-text-orange);
-}
-
-/* FONT SIZE */
-.about__cv span,
-.about__cv p {
-  font-size: 1.2rem;
-}
-
-.about__cv h4 {
-  font-size: 1.4rem;
-}
-
-.about__cv h3 {
-  font-size: 1.8rem;
-}
-
-.about__cv h2 {
+.about__education p {
+  color: var(--text-color);
+  font-weight: 300;
   font-size: 2rem;
+  word-spacing: 0.5rem;
+  line-height: 3rem;
 }
 
-.about__cv h1 {
-  font-size: 2.5rem;
+.about__skill {
+  width: 100%;
+  height: auto; 
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #0D0E10;
 }
 
-
-
-@media screen and (max-width: 1024px) {
-  .about__cv span,
-  .about__cv p,
-  .about__cv li {
-    font-size: 1.2rem;
-  }
-
-  .about__cv h4 {
-    font-size: 1.4rem;
-  }
-
-  .about__cv h3 {
-    font-size: 1.4rem;
-  }
-
-  .about__cv h2 {
-    font-size: 1.8rem;
-  }
-
-  .about__cv h1 {
-    font-size: 2.3rem;
-  }
-
-  .about__cv {
-    width: 100%;
-    padding: 1.5rem 1.5rem;
-    overflow-x: auto;
-  }
-
-  .about__hero{
-    padding: 1rem;
-    flex-direction: column;
-    scale: 0.95;
-  }
-
-  .about__hero>div{
-    text-align: center;
-  }
-
-  .cv__header {
-    flex-direction: column;
-  }
-
-  .cv__header .right p {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    margin-bottom: 0.5rem;
-    flex-wrap: wrap;
-  }
-
-  .cv__header .right p span {
-    margin-left: 10px;
-  }
-
-  .cv__grid {
-    display: block;
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-
-  .about__quote {
-    top: 170vh;
-  }
-
-  .about__quote .quote {
-    font-size: 2rem;
-  }
-
-  .about__quote .symbol {
-    font-size: 3.6rem;
-    margin-left: -1rem;
-  }
-
-  .about__quote .sub-content {
-    margin-top: 0.6rem;
-    font-size: 1rem;
-  }
+.about__skill h1 {
+  color: var(--text-color);
+  opacity: 0.8;
+  font-size: 3rem;
+  margin-bottom: 20px;
 }
 
-@media screen and (max-width: 950px) {
-  .about__hero{
-    padding: 0.2rem;
-    flex-direction: column;
-    scale: 0.8;
-  }
-
-  .about__hero>div{
-    text-align: center;
-  }
-
-  .about__quote .quote {
-    font-size: 1.5rem;
-    visibility: none;
-  }
-
-  .about__quote .symbol {
-    font-size: 2rem;
-    margin-left: -1rem;
-    margin-top: 1rem;
-  }
-}
-
-@keyframes hero__fadeInRight {
-  from {
-    opacity: 0;
-    transform: translateX(-5%);
-  }
-  to {
-    opacity: 0.6;
-    transform: translateX(0);
-  }
-}
-
-@keyframes hero__fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(5%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes quotes__fadeInUp {
-  from {
-    opacity: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 5rem;
-  }
-  to {
-    opacity: 1;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 0;
-  }
-}
-
-@keyframes cv__fadeIn {
-  from {
-    opacity: 0;
-    top: 320vh;
-  }
-  to {
-    opacity: 1;
-    top: 300vh;
-  }
+.skills-container {
+  opacity: 0.8;
+  display: flex;
+  width: 70%;
+  flex-wrap: wrap; 
+  justify-content: center; 
 }
 

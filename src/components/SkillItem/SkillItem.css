@@ -1,0 +1,29 @@
+.skill-item {
+    display: flex;
+    align-items: center;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #f9f9f915;
+    cursor: pointer;
+  }
+
+  .skill-item:hover{
+    opacity: 0.8;
+    transform: scale(1.05);
+    transition: 0.5s ease-out;
+  }
+  
+  .skill-item__logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+  }
+  
+  .skill-item__name {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    font-weight: 500;
+  }
+  
