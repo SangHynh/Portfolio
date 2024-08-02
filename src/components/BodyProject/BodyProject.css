@@ -25,7 +25,7 @@
     height: 100%;
     background: black;
     position: absolute;
-    opacity: 0.9;
+    opacity: 0.7;
     z-index: 2;
 }
 
@@ -34,4 +34,13 @@
     z-index: 3;
     font-size: 4rem;
     opacity: 0.9;
+}
+
+@media screen and (max-width:720px) {
+  .project__hero{
+    background: var(--project-mobile-hero-image);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }

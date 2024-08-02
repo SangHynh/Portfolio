@@ -5,58 +5,8 @@ import "../../index.css";
 import HeroImg from "../../assets/img/bocchi.png";
 import IUHLogo from "../../assets/img/Logo-IUH.jpg";
 import SkillItem from "../SkillItem";
-
+import { skills, tools } from "../../assets/data/skills";
 const BodyAbout = () => {
-  const skills = [
-    {
-      name: "HTML",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-    },
-    {
-      name: "CSS",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-    },
-    {
-      name: "JavaScript",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-    },
-    {
-      name: "React",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-    },
-    {
-      name: "Java",
-      logo: "https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/java.svg",
-    },
-    {
-      name: "Tailwind CSS",
-      logo: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
-    },
-    {
-      name: "Node.js",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-    },
-    {
-      name: "Express.js",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-    },
-    {
-      name: "MongoDB",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-    },
-    {
-      name: "MySQL",
-      logo: "https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/mysql.svg",
-    },
-  ];
-
-  const tools = [
-    { name: "Figma", logo: "https://skillicons.dev/icons?i=figma" },
-    { name: "Postman", logo: "https://skillicons.dev/icons?i=postman" },
-    { name: "Github", logo: "https://skillicons.dev/icons?i=github" },
-    { name: "VSCode", logo: "https://skillicons.dev/icons?i=vscode" },
-    { name: "Eclipse", logo: "https://skillicons.dev/icons?i=eclipse" },
-  ];
 
   /* animation when scroll */
 

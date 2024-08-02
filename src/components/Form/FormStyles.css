@@ -64,3 +64,16 @@
     left: 0%;
   }
 }
+
+@media screen and (max-width: 1200px) {
+
+  .form__container{
+    background: var(--contact-mobile-hero-image);
+    background-size: cover;
+  }
+
+  .form__container>form {
+    animation: none;
+  }
+
+}
