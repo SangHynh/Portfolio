@@ -157,6 +157,16 @@
 
 /* Responsive Styles */
 @media screen and (max-width: 1200px) {
+
+  .about__hero{
+    background: var(--about-mobile-hero-image);
+    background-size: contain;
+  }
+
+  .about__hero::after{
+    background: rgba(0, 0, 0, 0.2);
+  }
+
   .about__overview {
     flex-direction: column;
   }
@@ -194,6 +204,8 @@
     font-size: 1rem;
     word-spacing: 0.2rem;
     line-height: 1.5rem;
+    text-align: left;
+    padding: 0.5rem;
   }
   .skills-container {
     width: 100%;
