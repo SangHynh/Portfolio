@@ -5,7 +5,7 @@
     border-radius: 8px;
     padding: 10px;
     margin: 10px;
-    background-color: #f9f9f915;
+    background-color: #f9f9f940;
     cursor: pointer;
   }
 
@@ -16,8 +16,8 @@
   }
   
   .skill-item__logo {
-    width: 40px;
-    height: 40px;
+    width: 2rem;
+    height: 2rem;
     margin-right: 15px;
   }
   
@@ -27,3 +27,16 @@
     font-weight: 500;
   }
   
+  @media screen and (max-width: 1200px) {
+    .skill-item__logo {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-right: 15px;
+    }
+    
+    .skill-item__name {
+      font-size: 1rem;
+      color: var(--text-color);
+      font-weight: 500;
+    }
+  }
