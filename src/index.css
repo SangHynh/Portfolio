@@ -48,6 +48,7 @@ body {
   --about-web-hero-image: url("./assets/img/about1.png");
   --about-mobile-hero-image: url("./assets/img/about2.jfif");
   --contact-web-hero-image: url("./assets/img/contact.jpg");
+  --project-web-hero-image: url("./assets/img/project1.jpg");
   --cv-theme: #272822;
   --cv-text: #f8f8f2;
   --cv-text-green: #a6e22e;

@@ -83,9 +83,9 @@
   color: white;
   font-size: 1.5rem;
   text-decoration: none;
-  border-radius: 8px; /* Thêm bo góc */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ */
-  transition: background 0.3s ease, transform 0.3s ease; /* Hiệu ứng chuyển đổi */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease, transform 0.3s ease; 
   position: relative;
   overflow: hidden; 
   z-index: 1;

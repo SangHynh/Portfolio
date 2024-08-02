@@ -48,7 +48,7 @@ const Footer = () => {
         <div className="right">
           <h4>About me</h4>
           <p>
-            I'm a student web intern and front-end developer, eager to gain
+            I'm a student web intern, eager to gain
             practical experience, enhance skills, and explore opportunities.
           </p>
           <div className="social">
