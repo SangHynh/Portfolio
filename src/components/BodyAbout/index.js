@@ -51,7 +51,7 @@ const BodyAbout = () => {
       {/* Overview */}
       <div className="about__overview">
         <div className="image-overlay"></div>
-        <img src={HeroImg} alt="This is Bocchi" />
+        <img src={HeroImg} alt="This is Bocchi" loading="lazy"/>
         <div className="about__overview-content">
           <h2>
             I'm a fourth-year student seeking an internship to apply my skills
@@ -82,7 +82,7 @@ const BodyAbout = () => {
             <strong>Specialization:</strong> Software Engineering
           </p>
         </div>
-        <img src={IUHLogo} alt="IUH" />
+        <img src={IUHLogo} alt="IUH" loading="lazy"/>
       </div>
       {/* Skills */}
       <div className="about__skill">

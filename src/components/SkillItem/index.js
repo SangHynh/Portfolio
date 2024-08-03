@@ -4,7 +4,7 @@ import './SkillItem.css';
 const SkillItem = ({ logo, name }) => {
   return (
     <div className="skill-item">
-      <img src={logo} alt={name} className="skill-item__logo" />
+      <img src={logo} alt={name} className="skill-item__logo" loading='lazy'/>
       <p className="skill-item__name">{name}</p>
     </div>
   );

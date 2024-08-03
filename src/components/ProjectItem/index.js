@@ -17,7 +17,7 @@ const ProjectItem = ({
 }) => {
   return (
     <div className="project-item__container">
-      <img src={imageSrc} alt="Project" />
+      <img src={imageSrc} loading="lazy" alt="Project" />
       <div className="project-item__content">
         <h1>{projectName}</h1>
         <h2>{subTitle}</h2>
