@@ -216,10 +216,16 @@
 
   .about__overview-content {
     width: 100%;
+    padding: 0.5rem;
   }
 
   .about__overview img {
     width: 80%;
+  }
+
+  .about__overview a {
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
   }
 
   .about__education {
