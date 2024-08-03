@@ -48,8 +48,9 @@ const Footer = () => {
         <div className="right">
           <h4>About me</h4>
           <p>
-            I'm a student web intern, eager to gain
-            practical experience, enhance skills, and explore opportunities.
+            I am a student seeking a Software Intern position, eager to gain
+            practical experience, enhance my skills, and explore diverse
+            opportunities in software development.
           </p>
           <div className="social">
             <a target="_blank" href={urlFacebook} rel="noopener noreferrer">

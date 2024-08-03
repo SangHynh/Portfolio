@@ -177,6 +177,11 @@
   justify-content: center;
 }
 
+.about__links{
+  display: flex;
+  justify-content: space-around;
+}
+
 /* animation */
 .about__overview,
 .about__education,

@@ -7,7 +7,6 @@ import IUHLogo from "../../assets/img/Logo-IUH.jpg";
 import SkillItem from "../SkillItem";
 import { skills, tools } from "../../assets/data/skills";
 const BodyAbout = () => {
-
   /* animation when scroll */
 
   useEffect(() => {
@@ -51,20 +50,29 @@ const BodyAbout = () => {
       {/* Overview */}
       <div className="about__overview">
         <div className="image-overlay"></div>
-        <img src={HeroImg} alt="This is Bocchi" loading="lazy"/>
+        <img src={HeroImg} alt="This is Bocchi" loading="lazy" />
         <div className="about__overview-content">
           <h2>
             I'm a fourth-year student seeking an internship to apply my skills
             and gain real-world experience.
           </h2>
           <br />
-          <a
-            href={process.env.REACT_APP_CV}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            View Resume
-          </a>
+          <div className="about__links">
+            <a
+              href={process.env.REACT_APP_CV}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Resume 1
+            </a>
+            <a
+              href={process.env.REACT_APP_SUB_CV}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Resume 2
+            </a>
+          </div>
         </div>
       </div>
       {/* Education */}
@@ -82,7 +90,7 @@ const BodyAbout = () => {
             <strong>Specialization:</strong> Software Engineering
           </p>
         </div>
-        <img src={IUHLogo} alt="IUH" loading="lazy"/>
+        <img src={IUHLogo} alt="IUH" loading="lazy" />
       </div>
       {/* Skills */}
       <div className="about__skill">
