@@ -21,27 +21,29 @@ const ProjectItem = ({
     const observerOptions = {
       root: null,
       rootMargin: '0px',
-      threshold: 0.1, 
+      threshold: 0.1,
     };
 
     const handleIntersection = (entries, observer) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
-          observer.unobserve(entry.target); 
+          observer.unobserve(entry.target);
         }
       });
     };
 
     const observer = new IntersectionObserver(handleIntersection, observerOptions);
     
-    if (projectRef.current) {
-      observer.observe(projectRef.current);
+    const currentRef = projectRef.current; 
+    
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (projectRef.current) {
-        observer.unobserve(projectRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);
