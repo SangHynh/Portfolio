@@ -1,6 +1,8 @@
 .project-item__container {
-  background: #1a1a1a;
-  width: 100%;
+  margin: auto;
+  margin-top: 3rem;
+  background: var(--project-item-bg);
+  width: 97%;
   height: auto;
   position: relative;
   color: #fff;
@@ -79,4 +81,15 @@
     width: 100%;
     margin-bottom: 2rem;
   }
+}
+
+.project-item__container {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.project-item__container.visible {
+  opacity: 1;
+  transform: translateY(0);
 }

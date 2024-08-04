@@ -64,6 +64,7 @@ body {
   --form-color: rgba(255, 255, 255, 0.1);
   --toast-success: #91d6bd;
   --toast-error: #ff8a80;
+  --project-item-bg: #2121217a;
 }
 
 .button {

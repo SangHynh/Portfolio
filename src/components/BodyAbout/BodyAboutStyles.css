@@ -263,3 +263,10 @@
     justify-content: center;
   }
 }
+
+.about__overview, .about__education, .about__skill {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
