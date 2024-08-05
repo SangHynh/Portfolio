@@ -63,14 +63,7 @@ const BodyAbout = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              View Resume 1
-            </a>
-            <a
-              href={process.env.REACT_APP_SUB_CV}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View Resume 2
+              View Resume
             </a>
           </div>
         </div>
